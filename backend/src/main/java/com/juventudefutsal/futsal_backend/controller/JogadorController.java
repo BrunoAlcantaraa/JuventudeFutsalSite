@@ -20,7 +20,7 @@ public class JogadorController {
     private JogadorRepository repositoryJogadores;
 
     @GetMapping
-    public List<Jogador> listarJogadores() {
+    public List<Jogador> listarTodos() {
         return repositoryJogadores.findAll();
     }
 
