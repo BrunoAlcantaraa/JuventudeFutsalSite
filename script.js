@@ -99,39 +99,18 @@ const titulos = [
 /*
     Função para adicionar Cards das Pessoas nos Containers:
 */
-function exibirPessoas(lista, idDestino) {
+function exibir(lista, idDestino, idCard) {
     const container = document.getElementById(idDestino);
     container.innerHTML = "";
 
-    lista.forEach(pessoa => {
+    lista.forEach(item => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add(idCard);
 
         card.innerHTML = `
-            <img src="${pessoa.foto}" alt="${pessoa.nome || pessoa.colocacao}">
-            <h3>${pessoa.nome || pessoa.colocacao}</h3>
-            <p>${pessoa.posicao || pessoa.funcao || pessoa.ano}</p>
-        `;
-
-        container.appendChild(card);
-    });
-}
-
-/*
-    Função para adicionar Cards dos Títulos nos Containers:
-*/
-function exibirTitulos(lista, idDestino) {
-    const container = document.getElementById(idDestino);
-    container.innerHTML = "";
-
-    lista.forEach(titulo => {
-        const card = document.createElement("div");
-        card.classList.add("card-titulo");
-
-        card.innerHTML = `
-            <img src="${titulo.foto}" alt="${titulo.colocacao}">
-            <h3>${titulo.colocacao}</h3>
-            <p>${titulo.ano}</p>
+            <img src="${item.foto}" alt="${item.nome || item.colocacao}">
+            <h3>${item.nome || item.colocacao}</h3>
+            <p>${item.posicao || item.funcao || item.ano}</p>
         `;
 
         container.appendChild(card);
@@ -141,6 +120,6 @@ function exibirTitulos(lista, idDestino) {
 /*
     Insere os Cards nos Containers:
 */
-exibirPessoas(jogadores, "lista-jogadores");
-exibirPessoas(comissao, "lista-comissao");
-exibirTitulos(titulos, "lista-titulos");
+exibir(jogadores, "lista-jogadores", "card");
+exibir(comissao, "lista-comissao", "card")
+exibir(titulos, "lista-titulos", "card-titulo")
