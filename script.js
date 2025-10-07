@@ -97,7 +97,7 @@ const titulos = [
 ]
 
 /*
-    Função para adicionar Cards das Pessoas nos Containers:
+    Função para adicionar Cards nos Containers:
 */
 function exibir(lista, idDestino, idCard) {
     const container = document.getElementById(idDestino);
