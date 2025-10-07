@@ -5,7 +5,7 @@ const jogadores = [
     {
         nome: "Bruno Alcantara",
         posicao: "Ala",
-        foto: "img/jogadores/bruno-alcantara.jpg"
+        foto: "img/jogadores/bruno-alcantara.png"
     },
     {
         nome: "Pedro Zimerman",
@@ -66,7 +66,7 @@ const comissao = [
     {
         nome: "Anderson Nass",
         funcao: "Técnico",
-        foto: "img/comissao/anderson-nass.jpg"
+        foto: "img/comissao/anderson-nass.png"
     },
     {
         nome: "Vinicius Beuren",
